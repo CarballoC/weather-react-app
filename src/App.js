@@ -76,7 +76,7 @@ class App extends React.Component{
     e.preventDefault();
     const city = e.target.elements.city.value;
     // const country = e.target.elements.country.value;
-    const api_Call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_SECRET_KEY}`);
+    const api_Call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_SECRET_KEY}`);
     const response = await api_Call.json();
     console.log(response);
     this.setState({
